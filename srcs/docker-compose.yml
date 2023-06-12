@@ -1,0 +1,21 @@
+services:
+
+  nginx:
+    build: requirements/nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./requirements/wordpress/conf/wordpress:/app
+
+  wordpress:
+    build: requirements/wordpress
+    volumes:
+      - ./requirements/wordpress/conf/wordpress:/app
+
+  mariadb:
+    build: requirements/mariadb
+#   volumes:
+#     - ./requirements/mariadb/conf/db:/var/lib/mysql
+
+
+
