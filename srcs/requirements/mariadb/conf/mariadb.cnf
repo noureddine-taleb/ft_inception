@@ -23,8 +23,9 @@
 !includedir /etc/mysql/mariadb.conf.d/
 
 [mysqld]
+# allow network access
 skip-networking=0
-skip-bind-address
+bind-address = 0.0.0.0
 
 [client-server]
 port = 3306

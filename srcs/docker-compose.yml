@@ -1,5 +1,4 @@
 services:
-
   nginx:
     build: requirements/nginx
     ports:
@@ -14,8 +13,8 @@ services:
 
   mariadb:
     build: requirements/mariadb
-#   volumes:
-#     - ./requirements/mariadb/conf/db:/var/lib/mysql
+    volumes:
+      - ./requirements/mariadb/db:/var/lib/mysql
 
 
 
