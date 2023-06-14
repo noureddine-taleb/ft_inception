@@ -13,5 +13,5 @@ RUN rm -rf /var/lib/mysql; \
 
 # VOLUME /var/lib/mysql
 
-CMD /bin/init.sh
+ENTRYPOINT /bin/init.sh
 

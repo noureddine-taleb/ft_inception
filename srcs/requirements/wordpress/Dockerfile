@@ -6,5 +6,5 @@ RUN apt update \
 
 COPY ./conf/www.conf /etc/php/8.2/fpm/pool.d/
 
-CMD ["/usr/sbin/php-fpm8.2", "-F"]
+ENTRYPOINT ["/usr/sbin/php-fpm8.2", "-F"]
 

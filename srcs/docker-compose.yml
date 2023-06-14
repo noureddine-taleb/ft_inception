@@ -1,20 +1,29 @@
 services:
   nginx:
     build: requirements/nginx
+    restart: always
     ports:
-      - "8080:80"
+      - "443:443"
     volumes:
-      - ./requirements/wordpress/conf/wordpress:/app
+      - /home/ntaleb/data/wordpress:/app
+    networks:
+      - lemp
 
   wordpress:
     build: requirements/wordpress
+    restart: always
     volumes:
-      - ./requirements/wordpress/conf/wordpress:/app
+      - /home/ntaleb/data/wordpress:/app
+    networks:
+      - lemp
 
   mariadb:
     build: requirements/mariadb
+    restart: always
     volumes:
-      - ./requirements/mariadb/db:/var/lib/mysql
+      - /home/ntaleb/data/mariadb:/var/lib/mysql
+    networks:
+      - lemp
 
-
-
+networks:
+  lemp:
