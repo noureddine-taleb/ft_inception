@@ -25,5 +25,21 @@ services:
     networks:
       - lemp
 
+  ftp:
+    build: requirements/ftp
+    restart: always
+    volumes:
+      - /home/ntaleb/data/wordpress:/app
+    networks:
+      - lemp
+
+
+  redis:
+    build: requirements/redis
+    restart: always
+    networks:
+      - lemp
+
+
 networks:
   lemp:
