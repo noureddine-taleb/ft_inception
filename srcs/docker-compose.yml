@@ -40,7 +40,6 @@ services:
     networks:
       - lemp
 
-
   redis:
     build: requirements/redis
     restart: always
@@ -52,6 +51,12 @@ services:
     restart: always
     volumes:
       - /home/ntaleb/data/adminer:/adminer
+    networks:
+      - lemp
+
+  mailbox:
+    build: requirements/mailbox
+    restart: always
     networks:
       - lemp
 
