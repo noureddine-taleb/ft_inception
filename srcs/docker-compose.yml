@@ -6,6 +6,7 @@ services:
       - "443:443"
     volumes:
       - /home/ntaleb/data/wordpress:/app
+      - /home/ntaleb/data/adminer:/adminer
     networks:
       - lemp
 
@@ -30,6 +31,8 @@ services:
     restart: always
     volumes:
       - /home/ntaleb/data/wordpress:/app
+    ports:
+      - "21:21"
     networks:
       - lemp
 
@@ -40,6 +43,13 @@ services:
     networks:
       - lemp
 
+  adminer:
+    build: requirements/adminer
+    restart: always
+    volumes:
+      - /home/ntaleb/data/adminer:/adminer
+    networks:
+      - lemp
 
 networks:
   lemp:
