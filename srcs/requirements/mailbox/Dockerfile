@@ -6,5 +6,5 @@ RUN apt update && apt install -y postfix
 
 EXPOSE 25/tcp
 
-ENTRYPOINT ["redis-server", "/etc/redis/redis.conf", "--daemonize", "no"]
+ENTRYPOINT ["sleep", "5000"]
 

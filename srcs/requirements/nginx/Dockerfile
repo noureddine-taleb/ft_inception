@@ -8,5 +8,6 @@ COPY ./conf/certificate.crt /etc/ssl/certs/
 
 EXPOSE 443/tcp
 
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+# ENTRYPOINT ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["nginx", "-g", "daemon off; error_log /dev/stdout info;"]
 
