@@ -26,6 +26,9 @@ services:
     networks:
       - lemp
 
+#
+# bonus
+# 
   ftp:
     build:
       context: requirements/ftp

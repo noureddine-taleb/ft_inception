@@ -7,6 +7,10 @@ DB=$WORDPRESS_DB
 DBUSER=$WORDPRESS_USER
 DBUSERPASSWORD=$WORDPRESS_PASSWORD
 
+DBUSER2=$WORDPRESS_USER2
+DBUSERPASSWORD2=$WORDPRESS_PASSWORD2
+
+
 # create data dir if it doesn't exists this happens when we run for the first time
 if [ ! -d $DATADIR/mysql ]
 then
@@ -34,6 +38,10 @@ then
 
 	echo --------- create $DBUSER user
 	echo "grant all privileges on $DB.* to $DBUSER@'%' identified by '$DBUSERPASSWORD';" | mariadb -u root 
+
+	echo --------- create $DBUSER2 user
+	echo "create user $DBUSER2@'%' identified by '$DBUSERPASSWORD2';" | mariadb -u root 
+
 
 	echo ------- foreground mariadb
 	wait $MARIADBPID

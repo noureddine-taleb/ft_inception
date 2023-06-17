@@ -8,5 +8,5 @@ WORKDIR /app
 
 EXPOSE 8080/tcp
 
-CMD ["mvn", "spring-boot:run"]
+ENTRYPOINT ["mvn", "spring-boot:run"]
 
