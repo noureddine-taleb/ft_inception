@@ -23,6 +23,8 @@ services:
     restart: always
     volumes:
       - /home/ntaleb/data/mariadb:/var/lib/mysql
+    env_file:
+      - .env
     networks:
       - lemp
 
