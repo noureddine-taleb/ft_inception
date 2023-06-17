@@ -62,5 +62,13 @@ services:
     networks:
       - lemp
 
+  mailbox:
+    build: requirements/mailbox
+    restart: always
+    ports:
+      - "25:25/tcp"
+    networks:
+      - lemp
+
 networks:
   lemp:
