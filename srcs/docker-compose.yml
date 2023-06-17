@@ -31,7 +31,7 @@ services:
 # 
   ftp:
     build:
-      context: requirements/ftp
+      context: requirements/bonus/ftp
       args:
         - FTP_USER=$FTP_USER
         - FTP_PASSWORD=$FTP_PASSWORD
@@ -44,13 +44,13 @@ services:
       - lemp
 
   redis:
-    build: requirements/redis
+    build: requirements/bonus/redis
     restart: always
     networks:
       - lemp
 
   adminer:
-    build: requirements/adminer
+    build: requirements/bonus/adminer
     restart: always
     volumes:
       - /home/ntaleb/data/adminer:/adminer
@@ -58,7 +58,7 @@ services:
       - lemp
 
   spring-boot:
-    build: requirements/spring-boot
+    build: requirements/bonus/spring-boot
     restart: always
     ports:
       - "8080:8080/tcp"
@@ -66,7 +66,7 @@ services:
       - lemp
 
   mailbox:
-    build: requirements/mailbox
+    build: requirements/bonus/mailbox
     restart: always
     ports:
       - "25:25/tcp"
