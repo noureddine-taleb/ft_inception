@@ -3,9 +3,9 @@
 DATADIR=/var/lib/mysql
 USER=mysql
 
-DB=wordpress
-DBUSER=wpman
-DBUSERPASSWORD='P@ssw0rd'
+DB=$WORDPRESS_DB
+DBUSER=$WORDPRESS_USER
+DBUSERPASSWORD=$WORDPRESS_PASSWORD
 
 # create data dir if it doesn't exists this happens when we run for the first time
 if [ ! -d $DATADIR/mysql ]

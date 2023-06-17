@@ -1,0 +1,39 @@
+"More than 10 years of experience delivering tech solutions. Avid programmer and fast learner. Obsessed with detail and quality. Always trying to improve development and communication processes. I love simple and elegant solutions for every problem."
+
+"fullstack developer worked with many startups, on-site or remote. experienced in MEAN stack, linux administration, I love optimizations, and squeeze every bit of performance, always push for clean code, structured projects and effective communication"
+
+"I worked for a year in web agency in Casablanca we provide digital services, it is where we develop fink.ma. The I moved to another startup in france we work remotely and it is where we develop winnr.gg"
+
+"Bachelor’s degree in computer science with 2 years of professional work"
+
+"High quality code, clean structured project"
+
+"Independent
+Fluent in English, written and spoken
+Problem solver
+Proactive attitude
+minimalist"
+
+
+app: winnr.gg
+
+- improve application performance drastically by splitting the project into lazy loadable modules
+- introduce brotli and gzip compression to assets for faster loading, brotli is a modern efficient algo done by google, but it is supported only supported by modern browsers, so we used gzip too to support old browsers
+- fix ssr layout mangling problem caused by a module called flex-layout used all over the application, this module doesn't support ssr, so we decided to drop it, and use traditional css instead, it was a really big task, so I created an automation script that parses angular components and detects the usage of flex-layout directives and replace them with there equivalent css properties.
+- find a way to serve angular app through firebase functions and nginx proxy I wrote a blog about it here: https://noureddine.xyz/blog/angular/angular-ssr-in-firebase-function
+
+
+app: fink.ma
+
+- refactor the entire project:
++ backend: by rewriting all apis in clean and standard endpoints, split functionalities into separate modules, extract all keys and credentials into .env file
++ frontend: split the app into distinct modules each one with its components and services, refactor all the messy functions into small readable ones, extract the business logic from components into services, so they can be reused, split big components into smaller ones
+- implement social media logins like google and facebook
+- implement clean and efficient search algorithm, with the help of elasticsearch.
+- implement user profile, like, comment features
+- build backoffice to allow admin to monitor users, and see all kinds of statistics
+- build a business version to allow interested users to make deals with each other
+- deploy the ecosystem(main app, business, backoffice, backend, elastic server) into production and insure proper communication between parts, and high availability.
+- implement CI/CD pipeline to automatically deploy tests version.
+
+
